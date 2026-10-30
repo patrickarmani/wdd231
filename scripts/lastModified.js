@@ -1,3 +1,3 @@
 const date = new Date(document.lastModified);
-document.getElementById("lastModified").innerHTML = date;
-
+document.getElementById("lastModified").textContent =
+    `Last Modification: ${date.toLocaleString("en-US")}`;

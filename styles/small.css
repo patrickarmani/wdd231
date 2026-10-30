@@ -247,6 +247,10 @@ footer {
 
 #author-data {
     background-color: var(--color-text-muted);
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -20px;
     
 }
 
