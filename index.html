@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/lastModified.js" defer></script>
+    <script src="scripts/currentYear.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
     
 </head>
 <body>
@@ -27,13 +32,22 @@
         <img src="images/home.svg" alt="site logo" width="24" height="24">
 
         <span>Patrick Armani</span>
+        <span 
+            style="font-size:30px;cursor:pointer">
 
-        <button id="nav-button" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        </button>
+                <button 
+                    id="nav-button" 
+                    class="hamburger" 
+                    aria-label="Toggle navigation" 
+                    aria-expanded="false" 
+                    onclick="toggleNav()">&#9776;
+                </button>
+            
+        </span>
     </div>
 </header>
 
-<nav>
+<nav id="mySidenav">
     <ul>
         <li><a class="active" href="/index.html">Home</a></li>
         <li><a href="/html/">Chamber</a></li>
@@ -45,17 +59,39 @@
         <h1>Home</h1>
 
         <section id="aboutme">
-            <h5>About Me</h5>
-            <p></p>
+            <h2>About Me</h2>
+            <p>
+            
+            Hello, I am a Software Development student at BYU-Idaho, currently living in the state of Minas Gerais, Brazil.            
+            Throughout my studies, I have acquired new skills, including the use of powerful tools such as C#, JavaScript, CSS, 
+            and HTML—among many others—which enable me to build mobile and web applications.
+            I am Patrick Armani, and this is my learning page for WDD231.
+            
+            </p>
+
         </section>
 
         <section id="studentPhoto">
-            <h5>Student Photo</h5>
+            <h2>Student Photo</h2>
+            <img src="images/eu.webp" alt="Patrick Armani">
         </section>
 
         <section id="webCertificateCourses">
-            <h5>Web Certificate Courses</h5>
-        </section>
+            <h2>Web Certificate Courses</h2>
+            <div class="subject-one">
+                <div class="item1">ALL</div>
+                <div class="item2">CSE</div>
+                <div class="item3">WDD</div>
+            </div>
+            <div class="subject-two">
+
+            </div>
+
+            <div>
+                <div>Wdd 130</div>
+                <div>wdd 131</div>
+                <div>wdd 231</div>
+            </div>
 
 
     </main>
@@ -77,8 +113,6 @@
         </p>
     </footer>
 
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/lastModified.js"></script>
-    <script src="scripts/currentYear.js"></script>
+
 </body>
 </html>
