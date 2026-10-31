@@ -61,48 +61,5 @@
         padding: 15px 5px;
         gap: 15px;
     }
-    /* main {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 15px;
-    }
 
-    main h1,
-    #webCertificateCourses,
-    #total-credits {
-        grid-column: 1 / -1;
-    }
-
-    #aboutme,
-    #studentPhoto {
-        margin: 0;
-    }
-
-    .subject-two {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    #mySidenav {
-        width: 100%;
-        height: auto;
-    }
-
-    #mySidenav ul {
-        display: flex;
-    }
-
-    #mySidenav li {
-        flex: 1;
-    }
-
-    #mySidenav a {
-        text-align: center;
-    }
-
-    .hamburger {
-        display: none;
-    } */
 }

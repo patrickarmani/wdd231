@@ -308,7 +308,7 @@ footer {
     --em-bb-three-quarter: 89.5%;
 }
 
-/* Contorno espectral animado */
+/* Animated spectral outline */
 .subject-two .completed::before {
     content: "";
     position: absolute;
@@ -357,7 +357,7 @@ footer {
     transition: filter 0.25s;
 }
 
-/* Brilho ao passar o mouse */
+/* Glow on hover */
 .subject-two .completed:hover::before {
     filter: drop-shadow(
         0 0 calc(var(--em-bb-glow) + 8px)
@@ -371,7 +371,7 @@ footer {
     }
 }
 
-/* Acessibilidade */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     .subject-two .completed::before {
         animation: none;
