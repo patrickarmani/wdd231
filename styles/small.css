@@ -45,6 +45,14 @@ header {
     gap: 5px;
 }
 
+.header-content > span:first-of-type {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--color-text-light);
+}
+
 .header-content > span:last-child {
     margin-left: auto;
 }
