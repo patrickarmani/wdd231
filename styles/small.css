@@ -192,14 +192,6 @@ h2 {
     text-align: center;
 }
 
-h2 {
-    background-color: var(--color-secondary);
-    color: var(--color-text-light);
-    margin: 0;
-    padding: 8px;
-    font-size: 1.2rem;
-    text-align: center;
-}
 
 .subject-two {
     display: flex;
@@ -222,12 +214,6 @@ h2 {
     cursor: pointer;
 }
 
-.subject-two .completed {
-    background-color: var(--color-accent);
-
-    color: var(--color-text-light);
-    font-weight: 600;
-}
 
 .hamburger {
     background-color: var(--color-hover);
@@ -301,6 +287,11 @@ footer {
 }
 
 .subject-two .completed {
+
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    font-weight: 600;
+
     position: relative;
     isolation: isolate;
 
@@ -386,3 +377,7 @@ footer {
     }
 }
 
+.menu-trigger {
+    font-size: 30px;
+    cursor: pointer;
+}
