@@ -22,3 +22,13 @@ function toggleNav() {
         button.setAttribute("aria-expanded", "true");
     }
 }
+
+document.getElementById("nav-button").addEventListener("click", toggleNav);
+
+const desktopBreakpoint = window.matchMedia("(min-width: 768px)");
+
+desktopBreakpoint.addEventListener("change", () => {
+    if (!desktopBreakpoint.matches) {
+        closeNav();
+    }
+});

@@ -1,25 +1,24 @@
 :root {
-    /* Primary colors */
-    --color-primary: #181A1B;
-    --color-secondary: #303633;
-    --color-accent: #A8BFA9;
+    --color-primary: #0D0B10;
+    --color-secondary: #211D26;
+    --color-accent: #302A36;
 
-    /* Background colors */
-    --color-background: #F5F5F2;
-    --color-surface: #FFFFFF;
+    --color-background: #0D0B10;
+    --color-surface: #211D26;
 
-    /* Text colors */
-    --color-text: #181A1B;
-    --color-text-muted: #53605A;
+    --color-text: #F2EDF4;
+    --color-text-muted: #B7AEBB;
     --color-text-light: #FFFFFF;
 
-    /* Borders and details */
-    --color-border: #DDE3DD;
+    --color-border: #38313E;
 
-    /* Navigation and interactions */
-    --color-hover: #425248;
-    --color-active: #303633;
+    --color-hover: #39313F;
+    --color-active: #51445B;
+
+    --color-laser-primary: #FF65B5;
+    --color-laser-secondary: #8EDBFF;
 }
+
 
 
 
@@ -66,12 +65,12 @@ nav ul {
 
 nav a {
     display: block;
-    background-color: #484d4c;
+    background-color: var(--color-surface);
     color: white;
     text-align: left;
     padding: 0.7rem;
     text-decoration: none;
-    border: 1px solid #666666;
+    border: 1px solid var(--color-border);
 }
 
 nav li a:hover {
@@ -79,8 +78,8 @@ nav li a:hover {
 }
 
 nav a.active {
-    background-color: #7b7c7c;
-    color: white;
+    background-color: var(--color-active);
+    color: var(--color-primary);
 }
 
 main {
@@ -128,7 +127,7 @@ main {
 
 #webCertificateCourses {
    
-    margin-top: 30px;
+    margin-top: 0;
 }
 
 #webCertificateCourses h2 {
@@ -203,7 +202,7 @@ h2 {
 
 .subject-two > div {
     background-color: var(--color-border);
-    border: 1px solid var(--color-secondary);
+    border: 1px solid #51445B;
     border-radius: 3px;
     padding: 6px;
     text-align: center;
@@ -217,8 +216,16 @@ h2 {
 
 .subject-two .completed {
     background-color: var(--color-accent);
-    border-left: 5px solid var(--color-primary);
+
+    color: var(--color-text-light);
     font-weight: 600;
+}
+
+.hamburger {
+    background-color: var(--color-hover);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
 }
 
 footer {
@@ -228,7 +235,7 @@ footer {
     align-items: center;
     gap: 10px;
     padding: 20px 10px;
-    color: black;
+    color: var(--color-text-light);
     text-align: center;
 }
 
@@ -237,12 +244,14 @@ footer {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-top: -45px;
+    margin-top: 0;
 }
 
 #socialMedia img {
     
     height: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
 }
 
 #author-data {
@@ -270,5 +279,102 @@ footer {
 #total-credits {
     font-size: 0.85rem;
     text-align: center;
+}
+
+
+
+
+/* Spectral Loop - EvenMesh */
+
+@property --em-bb-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.subject-two .completed {
+    position: relative;
+    isolation: isolate;
+
+    --em-bb-accent: #FF72B6;
+    --em-bb-accent-two: #7DEBFF;
+    --em-bb-thickness: 3px;
+    --em-bb-duration: 6.2s;
+    --em-bb-glow: 24px;
+
+    --em-bb-start: 58%;
+    --em-bb-quarter: 68.5%;
+    --em-bb-mid: 79%;
+    --em-bb-three-quarter: 89.5%;
+}
+
+/* Contorno espectral animado */
+.subject-two .completed::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none;
+
+    padding: var(--em-bb-thickness);
+
+    background: conic-gradient(
+        from var(--em-bb-angle),
+        transparent 0 var(--em-bb-start),
+        var(--em-bb-accent) var(--em-bb-start),
+        #ff7fbb var(--em-bb-quarter),
+        var(--em-bb-accent-two) var(--em-bb-mid),
+        #8fffbd var(--em-bb-three-quarter),
+        transparent 100%
+    );
+
+    filter: drop-shadow(
+        0 0 var(--em-bb-glow)
+        color-mix(
+            in srgb,
+            var(--em-bb-accent) 70%,
+            transparent
+        )
+    );
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    mask-composite: exclude;
+
+    animation: em-bb-turn
+        var(--em-bb-duration)
+        linear infinite reverse;
+
+    transition: filter 0.25s;
+}
+
+/* Brilho ao passar o mouse */
+.subject-two .completed:hover::before {
+    filter: drop-shadow(
+        0 0 calc(var(--em-bb-glow) + 8px)
+        var(--em-bb-accent)
+    );
+}
+
+@keyframes em-bb-turn {
+    to {
+        --em-bb-angle: 360deg;
+    }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .subject-two .completed::before {
+        animation: none;
+    }
 }
 
