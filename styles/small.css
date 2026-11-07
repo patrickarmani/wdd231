@@ -278,104 +278,63 @@ footer {
 
 
 
-/* Spectral Loop - EvenMesh */
 
-@property --em-bb-angle {
-    syntax: "<angle>";
-    inherits: false;
-    initial-value: 0deg;
-}
+/* Neon Pulse - Completed Courses */
 
 .subject-two .completed {
-
+    position: relative;
     background-color: var(--color-accent);
     color: var(--color-text-light);
     font-weight: 600;
 
-    position: relative;
-    isolation: isolate;
+    border: 2px solid #FF72B6;
+    border-radius: 5px;
 
-    --em-bb-accent: #FF72B6;
-    --em-bb-accent-two: #7DEBFF;
-    --em-bb-thickness: 3px;
-    --em-bb-duration: 6.2s;
-    --em-bb-glow: 24px;
+    box-shadow:
+        0 0 5px rgba(255, 114, 182, 0.5),
+        0 0 12px rgba(125, 235, 255, 0.25);
 
-    --em-bb-start: 58%;
-    --em-bb-quarter: 68.5%;
-    --em-bb-mid: 79%;
-    --em-bb-three-quarter: 89.5%;
+    animation: neon-pulse 3s ease-in-out infinite;
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/* Animated spectral outline */
-.subject-two .completed::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    border-radius: inherit;
-    pointer-events: none;
+/* Alternating neon glow */
 
-    padding: var(--em-bb-thickness);
-
-    background: conic-gradient(
-        from var(--em-bb-angle),
-        transparent 0 var(--em-bb-start),
-        var(--em-bb-accent) var(--em-bb-start),
-        #ff7fbb var(--em-bb-quarter),
-        var(--em-bb-accent-two) var(--em-bb-mid),
-        #8fffbd var(--em-bb-three-quarter),
-        transparent 100%
-    );
-
-    filter: drop-shadow(
-        0 0 var(--em-bb-glow)
-        color-mix(
-            in srgb,
-            var(--em-bb-accent) 70%,
-            transparent
-        )
-    );
-
-    -webkit-mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-
-    -webkit-mask-composite: xor;
-
-    mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-
-    mask-composite: exclude;
-
-    animation: em-bb-turn
-        var(--em-bb-duration)
-        linear infinite reverse;
-
-    transition: filter 0.25s;
-}
-
-/* Glow on hover */
-.subject-two .completed:hover::before {
-    filter: drop-shadow(
-        0 0 calc(var(--em-bb-glow) + 8px)
-        var(--em-bb-accent)
-    );
-}
-
-@keyframes em-bb-turn {
-    to {
-        --em-bb-angle: 360deg;
+@keyframes neon-pulse {
+    0%, 100% {
+        border-color: #FF72B6;
+        box-shadow:
+            0 0 5px rgba(255, 114, 182, 0.5),
+            0 0 12px rgba(255, 114, 182, 0.2);
     }
+
+    50% {
+        border-color: #7DEBFF;
+        box-shadow:
+            0 0 8px rgba(125, 235, 255, 0.7),
+            0 0 18px rgba(125, 235, 255, 0.35);
+    }
+}
+
+/* Hover effect */
+
+.subject-two .completed:hover {
+    background-color: var(--color-hover);
+    box-shadow:
+        0 0 10px rgba(255, 114, 182, 0.8),
+        0 0 20px rgba(125, 235, 255, 0.5);
 }
 
 /* Accessibility */
+
 @media (prefers-reduced-motion: reduce) {
-    .subject-two .completed::before {
+    .subject-two .completed {
         animation: none;
     }
 }
+
 
 .menu-trigger {
     font-size: 30px;
