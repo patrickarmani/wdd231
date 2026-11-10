@@ -1,0 +1,15 @@
+@media screen and (min-width: 768px) {
+    .menu-trigger {
+        display: none;
+    }
+
+    #mySidenav {
+        display: block;
+    }
+
+    #companies.grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+}
+ 
+}

@@ -1,0 +1,36 @@
+{
+    "name":"Brooks",
+    "movingDate" : {
+        "day": 23,
+        "mount": "october",
+        "year": 2024
+    },
+    "numberOfPeople": 4,
+    "visited": true,
+    "individualData": [
+        {
+            "name": "Zoe",
+            "gender": "female",
+            "burthdate": "13 october 2015"
+            },
+
+        {
+            "name": "Marco",
+            "gender": "male",
+            "burthdate": "11 december 1985"
+            },
+
+        {
+            "name": "Voctoria",
+            "gender": "female",
+            "burthdate": "03 march 1987"
+        },
+
+        {
+            "name": "Nicanor",
+            "gender": "male",
+            "burthdate": "01 january 2008"
+            }
+
+    ]
+}

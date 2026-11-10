@@ -1,0 +1,94 @@
+[
+{
+    "companyName": "Horizonte Tech Solutions",
+    "companyAddresses": "Rua Pernambuco | 850 | Savassi",
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "phone": "+55 31 3333-1001",
+    "website": "https://htechsol.com",
+    "image":"https://htechsol.com/images/htechsol.wepb",
+    "membershipLevel": "gold",
+    "id": "01"
+
+},
+
+{
+    "companyName": "Minas Prime Engenharia",
+    "companyAddresses": "Avenida do Contorno | 4520 | Funcionários",
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "phone": "+55 31 3555-1003",
+    "website": "https://mpeng.com",
+    "image":"https://mpeng.com/images/mpeng.wepb",
+    "membershipLevel": "silver",
+    "id": "02"
+
+},
+
+{
+    "companyName": "Pampulha Gourmet",
+    "companyAddresses": "Avenida Fleming | 620 | Ouro Preto",
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "phone": "+55 31 3666-1004",
+    "website": "https://pamgourmet.com.br",
+    "image":"https://pamgourmet.com/images/pamgourmet.wepb",
+    "membershipLevel": "gold",
+    "id": "03"
+
+},
+
+{
+    "companyName": "Serra Verde Sustentabilidade",
+    "companyAddresses": "Rua do Ouro | 315 | Serra",
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "phone": "+55 31 3777-1005",
+    "website": "https://serraverde.com.br",
+    "image":"https://serraverde.com/images/serraverde.wepb",
+    "membershipLevel": "member",
+    "id": "04"
+
+},
+
+{
+    "companyName": "BH Connect Marketing",
+    "companyAddresses": "Rua da Bahia| 1850 | Lourdes",
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "phone": "+55 31 3888-1006",
+    "website": "https://connectmark.com.br",
+    "image":"https://connectmark.com/images/connectmark.wepb",
+    "membershipLevel": "silver",
+    "id": "05"
+
+},
+
+{
+    "companyName": "Montes Claros Design Studio",
+    "companyAddresses": "Avvenida Professor Mário Werneck| 1250 | Buritis",
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "phone": "+55 31 3999-1007",
+    "website": "https://mcdesign.com.br",
+    "image":"https://mcdesignk.com/images/mcdesign.wepb",
+    "membershipLevel": "silver",
+    "id": "06"
+
+},
+
+{
+    "companyName": "Capital Mineira Consultoria",
+    "companyAddresses": "Avenida Luiz Paulo Franco| 580 | Belvedere",
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "phone": "+55 31 3001-1008",
+    "website": "https://connectmark.com.br",
+    "image":"https://connectmark.com/images/connectmark.wepb",
+    "membershipLevel": "member",
+    "id": "07"
+
+}
+
+
+]
