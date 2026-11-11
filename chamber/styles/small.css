@@ -49,6 +49,19 @@ main {
     color: var(--color-text);
 }
 
+
+main h1 {
+    font-family: "Roboto", sans-serif;
+    margin: 15px;
+
+
+}
+
+.membership-level {
+    color: var(--color-laser-secondary);
+    font-weight: bold;
+}
+
 #companies.grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -60,6 +73,27 @@ main {
   flex-direction: column;
   gap: 20px;
 }
+
+.member-card {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+
+.member-card h2 {
+    color: var(--color-primary);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.membership-level {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
 
 .site-name {
     font-size: 1rem;
