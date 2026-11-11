@@ -74,6 +74,25 @@ main h1 {
   gap: 20px;
 }
 
+.company-details {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.company-details img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.company-info {
+    overflow-wrap:break-word;
+    flex: 1;
+    text-align: left;
+}
 .member-card {
     background-color: var(--color-surface);
     color: var(--color-text);

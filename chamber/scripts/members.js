@@ -50,6 +50,7 @@ async function loadMembers() {
         companyImage.src = member.image;
         companyImage.alt = member.companyName; /*add "alt" to image*/
         companyDetails.appendChild(companyImage);
+        companyImage.loading = "lazy";
 
  
             //Show company Info

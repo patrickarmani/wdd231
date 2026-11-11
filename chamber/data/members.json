@@ -6,7 +6,7 @@
     "state": "MG",
     "phone": "+55 31 3333-1001",
     "website": "https://htechsol.com",
-    "image":"https://htechsol.com/images/htechsol.wepb",
+    "image": "images/horizonte-tech-solutions.webp",
     "membershipLevel": "gold",
     "id": "01"
 
@@ -19,7 +19,7 @@
     "state": "MG",
     "phone": "+55 31 3555-1003",
     "website": "https://mpeng.com",
-    "image":"https://mpeng.com/images/mpeng.wepb",
+    "image":"images/minas-prime-engenharia.webp",
     "membershipLevel": "silver",
     "id": "02"
 
@@ -32,7 +32,7 @@
     "state": "MG",
     "phone": "+55 31 3666-1004",
     "website": "https://pamgourmet.com.br",
-    "image":"https://pamgourmet.com/images/pamgourmet.wepb",
+    "image":"images/pampulha-gourmet.webp",
     "membershipLevel": "gold",
     "id": "03"
 
@@ -45,7 +45,7 @@
     "state": "MG",
     "phone": "+55 31 3777-1005",
     "website": "https://serraverde.com.br",
-    "image":"https://serraverde.com/images/serraverde.wepb",
+    "image":"images/serra-verde-sustentabilidade.webp",
     "membershipLevel": "member",
     "id": "04"
 
@@ -58,7 +58,7 @@
     "state": "MG",
     "phone": "+55 31 3888-1006",
     "website": "https://connectmark.com.br",
-    "image":"https://connectmark.com/images/connectmark.wepb",
+    "image":"images/bh-connect-marketing.webp",
     "membershipLevel": "silver",
     "id": "05"
 
@@ -71,7 +71,7 @@
     "state": "MG",
     "phone": "+55 31 3999-1007",
     "website": "https://mcdesign.com.br",
-    "image":"https://mcdesignk.com/images/mcdesign.wepb",
+    "image":"images/montes-claros-design-studio.webp",
     "membershipLevel": "silver",
     "id": "06"
 
@@ -84,7 +84,7 @@
     "state": "MG",
     "phone": "+55 31 3001-1008",
     "website": "https://connectmark.com.br",
-    "image":"https://connectmark.com/images/connectmark.wepb",
+    "image":"images/capital-mineira-consultoria.webp",
     "membershipLevel": "member",
     "id": "07"
 
