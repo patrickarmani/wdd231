@@ -35,40 +35,54 @@ async function loadMembers() {
     members.forEach((member) => {
 
         const card = document.createElement("section");
-
         card.classList.add("member-card");
-
+        
         const companyName = document.createElement("h2");
-            companyName.textContent = member.companyName;
-
+        companyName.textContent = member.companyName;
         card.appendChild(companyName);
+        // companiesContainer.appendChild(card);
 
-        companiesContainer.appendChild(card);
-
-        //Show company image//
+        //Show Details
+        const companyDetails = document.createElement("div");
+        companyDetails.classList.add("company-details");
+        card.appendChild(companyDetails);
         const companyImage = document.createElement("img");
         companyImage.src = member.image;
         companyImage.alt = member.companyName; /*add "alt" to image*/
-        card.appendChild(companyImage);
-        
+        companyDetails.appendChild(companyImage);
 
-        //Show company address
-        const companyAddress = document.createElement("p");
-        companyAddress.textContent = member.companyAddresses;
-        card.appendChild(companyAddress);
-
-        //Show company phone
-        const companyPhone = document.createElement("p");
-        companyPhone.textContent = member.phone;
-        card.appendChild(companyPhone);
+            //Show company image//
+            // const companyImage = document.createElement("img");
+            // companyImage.src = member.image;
+            // companyImage.alt = member.companyName; /*add "alt" to image*/
+            // card.appendChild(companyImage);
+            // companyDetails.appendChild(companyImage);
         
-        //Show company Website
-        const companyWebsite = document.createElement("a");
-        companyWebsite.textContent = member.website;
-        companyWebsite.href = member.Website;
-        companyWebsite.target = "_blank";
-        companyWebsite.rel = "noopener noreferrer";
-        card.appendChild(companyWebsite);
+            //Show company Info
+            const companyInfo = document.createElement("div");
+            companyInfo.classList.add("company-info");
+            companyDetails.appendChild(companyInfo);
+
+                //Show company address
+                const companyAddress = document.createElement("p");
+                companyAddress.textContent = member.companyAddresses;
+                //card.appendChild(companyAddress);
+                companyInfo.appendChild(companyAddress);
+
+                 //Show company phone
+                const companyPhone = document.createElement("p");
+                companyPhone.textContent = member.phone;
+                //card.appendChild(companyPhone);
+                companyInfo.appendChild(companyPhone);
+
+                //Show company Website
+                const companyWebsite = document.createElement("a");
+                companyWebsite.textContent = member.website;
+                companyWebsite.href = member.website;
+                companyWebsite.target = "_blank";
+                companyWebsite.rel = "noopener noreferrer";
+                //card.appendChild(companyWebsite);
+                companyInfo.appendChild(companyWebsite);
 
         //Show company Level
         const companyMembership = document.createElement("p");
@@ -76,16 +90,8 @@ async function loadMembers() {
         card.appendChild(companyMembership);
         companyMembership.classList.add("membership-level");
 
+        companiesContainer.appendChild(card);
 
-        //organize the card
-        const companyDetails = document.createElement("div");
-        companyDetails.classList.add("company-details");
-        card.appendChild(companyDetails);
-        companyDetails.appendChild(companyImage);
-
-        const companyInfo = document.createElement("div");
-        companyInfo.classList.add("company-info");
-        companyDetails.appendChild(companyInfo);
     });
 
 }
