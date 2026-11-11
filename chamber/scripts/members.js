@@ -40,7 +40,7 @@ async function loadMembers() {
         const companyName = document.createElement("h2");
         companyName.textContent = member.companyName;
         card.appendChild(companyName);
-        // companiesContainer.appendChild(card);
+        
 
         //Show Details
         const companyDetails = document.createElement("div");
@@ -51,13 +51,7 @@ async function loadMembers() {
         companyImage.alt = member.companyName; /*add "alt" to image*/
         companyDetails.appendChild(companyImage);
 
-            //Show company image//
-            // const companyImage = document.createElement("img");
-            // companyImage.src = member.image;
-            // companyImage.alt = member.companyName; /*add "alt" to image*/
-            // card.appendChild(companyImage);
-            // companyDetails.appendChild(companyImage);
-        
+ 
             //Show company Info
             const companyInfo = document.createElement("div");
             companyInfo.classList.add("company-info");
