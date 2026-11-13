@@ -92,33 +92,22 @@
 
     #companies.list .member-card {
         display: grid;
-        grid-template-columns: 50px minmax(0, 1.4fr) minmax(0, 3.6fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: auto auto;
         align-items: center;
-        gap: 8px 16px;
-        padding: 12px 16px;
+        column-gap: 24px;
+        row-gap: 6px;
+        padding: 14px 16px;
     }
 
-    #companies.list .member-card h2 {
-        grid-column: 2;
-        grid-row: 1;
-        margin: 0;
-        text-align: left;
-        font-size: 1rem;
-    }
-
-    #companies.list .company-tagline {
-        grid-column: 2;
-        grid-row: 2;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-align: left;
-    }
+    /* Allow nested elements to participate in the card grid */
 
     #companies.list .company-details,
     #companies.list .company-info {
         display: contents;
     }
+
+    /* Company image */
 
     #companies.list .company-details img {
         grid-column: 1;
@@ -126,11 +115,38 @@
         width: 50px;
         height: 50px;
         object-fit: cover;
+        align-self: center;
     }
 
-    #companies.list .company-info p,
-    #companies.list .company-info a {
-        grid-column: 3;
+    /* Company name */
+
+    #companies.list .member-card h2 {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0 0 0 62px;
+        font-size: 1rem;
+        text-align: left;
+        align-self: end;
+        min-width: 0;
+    }
+
+    /* Company tagline */
+
+    #companies.list .company-tagline {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0 0 0 62px;
+        padding: 0;
+        border: none;
+        text-align: left;
+        align-self: start;
+        min-width: 0;
+    }
+
+    /* Address and phone */
+
+    #companies.list .company-info p {
+        grid-column: 2;
         margin: 0;
         min-width: 0;
         overflow-wrap: anywhere;
@@ -138,32 +154,52 @@
 
     #companies.list .company-info p:first-child {
         grid-row: 1;
+        align-self: end;
     }
 
     #companies.list .company-info p:nth-child(2) {
         grid-row: 2;
+        align-self: start;
     }
+
+    /* Website */
 
     #companies.list .company-info a {
-        grid-row: 3;
-    }
+        grid-column: 3;
+        grid-row: 1;
+        align-self: end;
+        min-width: 0;
+        overflow-wrap: anywhere;
 
-    #companies.list .membership-level {
-        grid-column: 2;
-        grid-row: 3;
-        margin: 0;
+        color: var(--color-secondary);
+        text-decoration: underline;
+        text-underline-offset: 3px;
     }
-
-    #companies.list .company-info a {
-    color: var(--color-secondary);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
 
     #companies.list .company-info a:hover {
         color: var(--color-hover);
     }
 
+    /* Membership level */
+
+    #companies.list .membership-level {
+        grid-column: 3;
+        grid-row: 2;
+        align-self: start;
+        margin: 0;
+    }
+
+
+    #companies.list .company-info p {
+        justify-self: center;
+        text-align: left;
+    }
+    
+    #companies.list .company-info a,
+    #companies.list .membership-level {
+        justify-self: end;
+        text-align: right;
+    }
     /* FOOTER */
 
     footer {
