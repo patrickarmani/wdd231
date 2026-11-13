@@ -7,12 +7,20 @@ memberViewButtons.forEach((button) => {
 
         const selectedView = button.dataset.view;
 
+            memberViewButtons.forEach((btn) => {
+                btn.classList.remove("selected");
+            });
+
+            button.classList.add("selected");
+
         if (selectedView === "GRID") {
             
 
             companiesContainer.classList.add("grid");
 
             companiesContainer.classList.remove("list");
+
+  
         }
 
         else if (selectedView === "LIST") {
@@ -40,6 +48,11 @@ async function loadMembers() {
         const companyName = document.createElement("h2");
         companyName.textContent = member.companyName;
         card.appendChild(companyName);
+
+        const companyTagline = document.createElement("p");
+        companyTagline.textContent = member.tagline
+        card.appendChild(companyTagline);
+        companyTagline.classList.add("company-tagline");
         
 
         //Show Details
