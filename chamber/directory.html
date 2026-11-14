@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directory | Belo Horizonte Chamber of Commerce</title>
-    <meta name="description" content="Patrick Armani's WDD 231 Chamber of Commerce that gathers business leaders working in the community of Belo Horizonte City, Brazil">
+    <meta name="description"
+        content="Explore the Belo Horizonte Chamber of Commerce business directory and discover local companies, services, and business connections in Minas Gerais, Brazil.">
     <meta name="author" content="Patrick M. A. S. Armani">
 
         <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="WDD 231 | Belo Horizonte Chamber of Commerce">
+    <meta property="og:title" content="Directory | Belo Horizonte Chamber of Commerce">
 
-    <meta property="og:description" 
-        content="My website project and coursework  for Belo Horizonte Chamber of Commerce. WDD 231 - Coursework">
+    <meta property="og:description"
+        content="Explore local businesses and connect with members of the Belo Horizonte Chamber of Commerce in Minas Gerais, Brazil.">
 
     <meta property="og:image" 
         content="https://patrickarmani.github.io/wdd231/chamber/images/beloHorizonteCity.webp">
 
-    <meta property="og:url" 
-        content="https://patrickarmani.github.io/wdd231/">
+    <meta property="og:url"
+      content="https://patrickarmani.github.io/wdd231/chamber/directory .html">
 
     <!--Add favicon-->
     <link rel="icon" href="images/favicon.ico">
@@ -98,8 +99,13 @@
         <section id="directory">
         
             <div class="directory-controls">
-                <button type="button" class="item1 selected" data-view="GRID">GRID</button>
-                <button type="button" class="item2" data-view="LIST">LIST</button>
+                <button type="button" class="item1 selected" data-view="GRID" aria-pressed="true">
+                    GRID
+                </button>
+
+                <button type="button" class="item2" data-view="LIST" aria-pressed="false">
+                    LIST
+                </button>
             </div>
 
             <div id="companies" class="grid">
@@ -132,7 +138,9 @@
                 <p>
                     &copy;
                     <span id="currentyear"></span>
-                    &bull; Patrick M.A.S. Armani &bull; Minas Gerais, Brazil
+                    &bull; Patrick M. A. S. Armani
+                    &bull; WDD 231
+                    &bull; Minas Gerais, Brazil
                 </p>
                 <p>
                     <span id="lastModified"></span>

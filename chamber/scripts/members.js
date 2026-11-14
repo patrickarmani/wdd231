@@ -7,11 +7,13 @@ memberViewButtons.forEach((button) => {
 
         const selectedView = button.dataset.view;
 
-            memberViewButtons.forEach((btn) => {
-                btn.classList.remove("selected");
-            });
+        memberViewButtons.forEach((btn) => {
+            btn.classList.remove("selected");
+            btn.setAttribute("aria-pressed", "false");
+        });
 
-            button.classList.add("selected");
+        button.classList.add("selected");
+        button.setAttribute("aria-pressed", "true");
 
         if (selectedView === "GRID") {
             
@@ -50,7 +52,7 @@ async function loadMembers() {
         card.appendChild(companyName);
 
         const companyTagline = document.createElement("p");
-        companyTagline.textContent = member.tagline
+        companyTagline.textContent = member.tagline;
         card.appendChild(companyTagline);
         companyTagline.classList.add("company-tagline");
         
@@ -93,10 +95,19 @@ async function loadMembers() {
                 companyInfo.appendChild(companyWebsite);
 
         //Show company Level
-        const companyMembership = document.createElement("p");
-        companyMembership.textContent = member.membershipLevel;
-        card.appendChild(companyMembership);
-        companyMembership.classList.add("membership-level");
+                const companyMembership = document.createElement("p");
+
+                const membershipLevels = {
+                    1: "MEMBER",
+                    2: "SILVER",
+                    3: "GOLD"
+                };
+
+                companyMembership.textContent =
+                    `Level: ${membershipLevels[member.membershipLevel]}`;
+
+                companyMembership.classList.add("membership-level");
+                card.appendChild(companyMembership);
 
         companiesContainer.appendChild(card);
 

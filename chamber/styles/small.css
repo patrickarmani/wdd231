@@ -47,6 +47,7 @@ header {
 main {
     background-color: var(--color-background);
     color: var(--color-text);
+    padding: 0 16px 24px;
 }
 
 
@@ -110,8 +111,7 @@ main h1 {
 }
 
 #companies.list .company-details img {
-    width: 60px;
-    height: 60px;
+    display: none;
 }
 
 .company-details {
