@@ -1,0 +1,152 @@
+<!---Step 2 - File and Folder Setup-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belo Horizonte Chamber of Commerce</title>
+    <meta name="description"
+        content="Patrick Armani's WDD 231 Chamber of Commerce that gathers business leaders working in the community of Belo Horizonte City, Brazil">
+    <meta name="author" content="Patrick M. A. S. Armani">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="WDD 231 | Belo Horizonte Chamber of Commerce">
+
+    <meta property="og:description"
+        content="My website project and coursework  for Belo Horizonte Chamber of Commerce. WDD 231 - Coursework">
+
+    <meta property="og:image" content="https://patrickarmani.github.io/wdd231/chamber/images/beloHorizonteCity.webp">
+
+    <meta property="og:url" content="https://patrickarmani.github.io/wdd231/">
+
+    <!--Add favicon-->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!--font Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--end font Roboto-->
+
+    <!--Step 4: Css-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!--normalize-->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+
+    <script src="../scripts/last-modified.js" defer></script>
+    <script src="../scripts/current-year.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-content">
+                <img id="logobh" src="images/bhchambercommercelogo.svg" alt="site logo" width="50" height="50">
+
+                <span class="site-name">
+                    Belo Horizonte
+                    <br>
+                    Chamber of Commerce</span>
+
+                <span class="site-name-desktop">
+
+                    Belo Horizonte Chamber of Commerce
+
+                </span>
+
+                <span class="menu-trigger">
+                    <button id="nav-button" class="hamburger" type="button" aria-label="Toggle navigation"
+                        aria-controls="mySidenav" aria-expanded="false">
+
+                        <svg class="menu-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+
+                            <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+
+                            <path class="line--2" d="M0 50h70" />
+
+                            <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+
+                        </svg>
+                    </button>
+                </span>
+
+            </div>
+
+
+
+            <nav id="mySidenav">
+
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- <h1>Directory</h1>
+        <section id="directory">
+
+            <div class="directory-controls">
+                <button type="button" class="item1 selected" data-view="GRID">GRID</button>
+                <button type="button" class="item2" data-view="LIST">LIST</button>
+            </div>
+
+            <div id="companies" class="grid">
+
+            </div>
+
+        </section> -->
+        <section class="hero">
+            
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <section id="chamberdatas">
+                <h2>Belo Horizonte Chamber of Commerce</h2>
+                <p>Otacílio Negrão de Lima Avenue 3000 <br> Belo Horizonte | Minas Gerais <br> Brazil | info@bhcc.org
+                    <br> (31) 1342- 5678</p>
+
+
+            </section>
+
+            <section id="socialMedia">
+                <a href="https://www.linkedin.com/in/patrickarmani/"><img src="../images/linkedin.svg"
+                        alt="linkedin logo" width="70" height="70"></a>
+                <a href="https://github.com/patrickarmani"><img src="../images/github.svg" alt="github logo" width="70"
+                        height="70"></a>
+                <a href="https://x.com/"><img src="../images/twitter-alt.svg" alt="twiter logo" width="70"
+                        height="70"></a>
+            </section>
+
+            <div id="author-data">
+                <p>
+                    &copy;
+                    <span id="currentyear"></span>
+                    &bull; Patrick M.A.S. Armani &bull; Minas Gerais, Brazil
+                </p>
+                <p>
+                    <span id="lastModified"></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
