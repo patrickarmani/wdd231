@@ -8,6 +8,42 @@
         margin: 0 auto;
     }
 
+    main h1 {
+        font-size: 2rem;
+    }
+
+
+    /* HOME PAGE - HERO */
+
+    .hero {
+        margin-top: 20px;
+    }
+
+    .hero img {
+        height: 500px;
+        object-position: center 60%;
+    }
+
+    .hero-content {
+        padding: 40px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-cta {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+    }
+
+
     /* HEADER */
 
     header {
@@ -235,5 +271,14 @@
     #author-data p {
         margin: 0 0 8px;
     }
+
+
+/* HOME PAGE - INFORMATION GRID */
+
+.home-info-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: stretch;
+}
+
 
 }

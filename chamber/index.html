@@ -14,11 +14,16 @@
     <meta property="og:title" content="WDD 231 | Belo Horizonte Chamber of Commerce">
 
     <meta property="og:description"
-        content="My website project and coursework  for Belo Horizonte Chamber of Commerce. WDD 231 - Coursework">
+        content="Discover local businesses, networking opportunities, and community events in Belo Horizonte, Brazil.">
+
+
+    <meta name="description"
+        content="Connect with local businesses, discover events, and explore opportunities through the Belo Horizonte Chamber of Commerce in Minas Gerais, Brazil.">
 
     <meta property="og:image" content="https://patrickarmani.github.io/wdd231/chamber/images/beloHorizonteCity.webp">
 
-    <meta property="og:url" content="https://patrickarmani.github.io/wdd231/">
+    <meta property="og:url" content="https://patrickarmani.github.io/wdd231/chamber/index.html">
+
 
     <!--Add favicon-->
     <link rel="icon" href="images/favicon.ico">
@@ -41,7 +46,9 @@
     <script src="../scripts/last-modified.js" defer></script>
     <script src="../scripts/current-year.js" defer></script>
     <script src="scripts/hamburger.js" defer></script>
-    <script src="scripts/members.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+
+    
 
 
 </head>
@@ -97,22 +104,66 @@
     </header>
 
     <main>
-        <!-- <h1>Directory</h1>
-        <section id="directory">
+        <h1>Belo Horizonte Chamber of Commerce</h1>
 
-            <div class="directory-controls">
-                <button type="button" class="item1 selected" data-view="GRID">GRID</button>
-                <button type="button" class="item2" data-view="LIST">LIST</button>
+        <section class="hero" aria-label="Welcome to Belo Horizonte">
+            <img
+                src="images/beloHorizonteCity.webp" alt="View of Belo Horizonte, Minas Gerais, Brazil"
+                width="1600" height="900">
+            <div class="hero-content">
+                <h2>Connect. Grow. Succeed.</h2>
+                <p>Building a stronger busisness community in Belo Horizonte.</p>
+                <a href="join.html" class="hero-cta">
+                    Join the Chamber
+                </a>
+
             </div>
-
-            <div id="companies" class="grid">
-
-            </div>
-
-        </section> -->
-        <section class="hero">
             
         </section>
+        <div class="home-info-grid">
+
+            <section class="current-events">
+                <h2>Current Events</h2>
+
+                <article class="event-card">
+                    <h3>Business Networking Meeting</h3>
+                    <p>
+                        Connect with local entrepreneurs and
+                        discover new business opportunities
+                        in Belo Horizonte.
+                    </p>
+                    <p>
+                        <strong>Location:</strong>
+                        Belo Horizonte, Minas Gerais
+                    </p>
+                </article>
+            </section>
+
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+
+                <div class="weather-info">
+
+                    <img id="weather-icon" alt="" width="64" height="64" hidden>
+
+
+                    <div>
+                        <p id="temperature">Loading...</p>
+                        <p id="weather-description">Loading weather...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather-forecast">
+                <h2>Weather Forecast</h2>
+
+                <div id="forecast-container">
+                    <p>Loading forecast...</p>
+                </div>
+            </section>
+
+        </div>
+
 
     </main>
 
@@ -120,26 +171,27 @@
         <div class="footer-container">
             <section id="chamberdatas">
                 <h2>Belo Horizonte Chamber of Commerce</h2>
-                <p>Otacílio Negrão de Lima Avenue 3000 <br> Belo Horizonte | Minas Gerais <br> Brazil | info@bhcc.org
-                    <br> (31) 1342- 5678</p>
-
-
+                <p>Otacílio Negrão de Lima Avenue 3000 <br> Belo Horizonte | Minas Gerais <br> Brazil | info@bhcc.org <br>
+                    (31) 1342- 5678</p>
+    
+    
             </section>
-
+    
             <section id="socialMedia">
-                <a href="https://www.linkedin.com/in/patrickarmani/"><img src="../images/linkedin.svg"
-                        alt="linkedin logo" width="70" height="70"></a>
+                <a href="https://www.linkedin.com/in/patrickarmani/"><img src="../images/linkedin.svg" alt="linkedin logo"
+                        width="70" height="70"></a>
                 <a href="https://github.com/patrickarmani"><img src="../images/github.svg" alt="github logo" width="70"
                         height="70"></a>
-                <a href="https://x.com/"><img src="../images/twitter-alt.svg" alt="twiter logo" width="70"
-                        height="70"></a>
+                <a href="https://x.com/"><img src="../images/twitter-alt.svg" alt="twiter logo" width="70" height="70"></a>
             </section>
-
+    
             <div id="author-data">
                 <p>
                     &copy;
                     <span id="currentyear"></span>
-                    &bull; Patrick M.A.S. Armani &bull; Minas Gerais, Brazil
+                    &bull; Patrick M. A. S. Armani
+                    &bull; WDD 231
+                    &bull; Minas Gerais, Brazil
                 </p>
                 <p>
                     <span id="lastModified"></span>
