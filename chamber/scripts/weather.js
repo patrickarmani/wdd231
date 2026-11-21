@@ -35,6 +35,11 @@ function displayResults(data) {
     myTown.innerHTML = data.name
     myWeatherDescription.innerHTML = data.weather[0].description
     myTemperature.innerHTML = `${data.main.temp}&deg;C`
+
+    const weatherIcon = data.weather[0].icon;
+    const weatherIconUrl = `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+    myWeatherIcon.src = weatherIconUrl;
+    myWeatherIcon.hidden = false;
 }
 
 // START THE PROCESS
