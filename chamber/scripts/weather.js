@@ -38,8 +38,11 @@ function displayResults(data) {
 
     const weatherIcon = data.weather[0].icon;
     const weatherIconUrl = `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+    const weatherAlt = data.weather[0].description;
     myWeatherIcon.src = weatherIconUrl;
     myWeatherIcon.hidden = false;
+    
+    myWeatherIcon.alt = weatherAlt; 
 }
 
 // START THE PROCESS
