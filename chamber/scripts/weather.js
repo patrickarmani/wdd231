@@ -1,125 +1,41 @@
 
-console.log("Weather.js loaded successfully!");
+ // SELECT HTML ELEMENTS IN THE DOCUMENT
+const myTown = document.querySelector('#town');
+const myWeatherDescription = document.querySelector('#weather-description');
+const myTemperature = document.querySelector('#temperature');
+const myWeatherIcon = document.querySelector('#weather-icon');
 
+// CREATE REQUIRED VARIABLES FOR THE URL
+const myKey = "81b436ab0e12c0da53fe9f1431cd6706";
+const myLat = "-19.9220931930543";
+const myLong = "-43.939605344529106";
 
+// CONSTRUCT A FULL PATH USING TEMPLATE LITERALS
+const myURL = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`;
 
-const weatherUrl = new URL(
-    "https://api.open-meteo.com/v1/forecast"
-);
-
-
-weatherUrl.searchParams.set("latitude", "-19.9167");
-weatherUrl.searchParams.set("longitude", "-43.9345");
-weatherUrl.searchParams.set(
-    "current",
-    "temperature_2m,weather_code"
-);
-weatherUrl.searchParams.set(
-    "daily",
-    "temperature_2m_max,temperature_2m_min"
-);
-weatherUrl.searchParams.set("timezone", "America/Sao_Paulo");
-weatherUrl.searchParams.set("forecast_days", "4");
-
-
-function getWeatherDescription(code) {
-    const descriptions = {
-        0: "Clear sky",
-        1: "Mainly clear",
-        2: "Partly cloudy",
-        3: "Overcast",
-        45: "Fog",
-        48: "Depositing rime fog",
-        51: "Light drizzle",
-        53: "Moderate drizzle",
-        55: "Dense drizzle",
-        61: "Slight rain",
-        63: "Moderate rain",
-        65: "Heavy rain",
-        80: "Slight rain showers",
-        81: "Moderate rain showers",
-        82: "Violent rain showers",
-        95: "Thunderstorm"
-    };
-
-    return descriptions[code] ?? "Weather unavailable";
-}
-
-
-async function getCurrentWeather() {
+// TRY TO GRAB THE CURRENT WEATHER DATA
+async function apiFetch() {
     try {
-        const response = await fetch(weatherUrl);
-
-        if (!response.ok) {
-            throw new Error(
-                `HTTP error! Status: ${response.status}`
-            );
+        const response = await fetch(myURL);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data); // testing only
+            displayResults(data); // uncomment when ready
+        } else {
+            throw Error(await response.text());
         }
-
-        const data = await response.json();
-
-        console.log(data);
-
-
-        const temperature = data.current.temperature_2m;
-
-        document.querySelector("#temperature").textContent =
-            `${temperature.toFixed(1)} °C`;
-        
-        
-
-        const weatherCode = data.current.weather_code;
-
-        const description = getWeatherDescription(weatherCode);
-
-        document.querySelector("#weather-description").textContent =
-            description;
-        
-
-        const weatherIcon = document.querySelector("#weather-icon");
-
-        const iconName = getWeatherIcon(weatherCode);
-
-        weatherIcon.src = `images/weather/${iconName}.svg`;
-        weatherIcon.alt = description;
-        weatherIcon.hidden = false;
-
-
-
-
     } catch (error) {
-        console.error("Error fetching weather:", error);
+        console.log(error);
     }
 }
 
-
-
-function getWeatherIcon(code) {
-    if (code === 0 || code === 1) {
-        return "sun";
-    }
-
-    if (code === 2 || code === 3) {
-        return "cloud";
-    }
-
-    if (code === 45 || code === 48) {
-        return "cloud-fog";
-    }
-
-    if (code >= 51 && code <= 82) {
-        return "cloud-rain";
-    }
-
-    if (code >= 95) {
-        return "cloud-lightning";
-    }
-
-    return "cloud";
+// DISPLAY THE JSON DATA ONTO MY WEB PAGE
+function displayResults(data) {
+    console.log('hello')
+    myTown.innerHTML = data.name
+    myWeatherDescription.innerHTML = data.weather[0].description
+    myTemperature.innerHTML = `${data.main.temp}&deg;C`
 }
 
-
-
-getCurrentWeather();
-
-
+// START THE PROCESS
+apiFetch();
