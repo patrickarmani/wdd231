@@ -6,7 +6,7 @@ const myTemperature = document.querySelector('#temperature');
 const myWeatherIcon = document.querySelector('#weather-icon');
 
 // CREATE REQUIRED VARIABLES FOR THE URL
-const myKey = "81b436ab0e12c0da53fe9f1431cd6706";
+const myKey = "8dc75a80832b2622078f3a9f56ca54b5";//I deleted the last key for reason of security in 11/26/2026 and after created another, only for this course
 const myLat = "-19.9220931930543";
 const myLong = "-43.939605344529106";
 
