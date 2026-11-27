@@ -251,6 +251,17 @@ main h1 {
     --offset: -50;
 }
 
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+input {
+    margin-left: 1rem;
+    width: 60%;
+}
+
 footer {
     background-color: var(--color-primary);
     display: flex;

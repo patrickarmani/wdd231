@@ -119,28 +119,46 @@
         <div class="home-info-grid">
 
 
-            <section class="weather-forecast">
-                <h2>Fill the blanck space to be part with us</h2>
+            <section class="join-form">
+                <h2>Membership application form</h2>
 
                 <form action="/join.html">
+                    <fieldset> 
+                        
+                        <label for="firstName">First name:</label><br>
+                        <input type="text" id="firstName" name="firstName" autocomplete="given-name" placeholder="John"><br>
+                        
+                        <label for="lastName">Last name:</label><br>
+                        <input type="text" id="lastName" name="lastName" autocomplete="family-name" placeholder="Doe"><br><br>
+                        
+                        <label for="organizationalTitle">Organizational Title:</label><br>
+                        <input type="text" id="organizationalTitle" name="orgTitle" autocomplete="org-title"
+                            placeholder="organization-title"><br><br>
+                        <input type="text" id="mobPhone" name="mobPhone" autocomplete="org-phone" placeholdere="mobile phone number"><br><br>
+                        <input type="text" id="orgName" name="orgName" autocomplete="organization"
+                            placeholder="business/organization's name"><br><br>
+                        
+                        <label for="email">Email:</label>
+                        <input name="email" id="email" type="email" autocomplete="exemple@exemple.com" />
+                        
+                        <label for="description">A business/organization's description:</label>
+                        <input name="description" id="description" type="text" autocomplete="exemple@exemple.com" />
 
-                    <label for="firstName">First name:</label><br>
-                    <input type="text" id="firstName" name="firstName" autocomplete="given-name" value="John" ><br>
-
-                    <label for="lastName">Last name:</label><br>
-                    <input type="text" id="lastName" name="lastName" autocomplete="family-name" value="Doe"><br><br>
-
-                    <label for="organizationalTitle">Organizational Title:</label><br>
-                    <input type="text" id="orgTitle" name="orgTitle" autocomplete="org-title" value="organization-title"><br><br>
-                    <input type="text" id="mobPhone" name="mobPhone" autocomplete="org-phone" value="mobile phone number"><br><br>
-                    <input type="text" id="orgName" name="orgName" autocomplete="org-name" value="business/organization's name"><br><br>
-
-                    <label for="email">Email:</label>
-                    <input name="email" id="email" type="email" autocomplete="off" />
 
 
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend>Select your membership level</legend>
+                        <label><input type="radio" name="radio" value="np" /> NP Membership</label>
+                        <label><input type="radio" name="radio" value="bronze" /> Bronze Membership</label>
+                        <label><input type="radio" name="radio" value="silver" /> Silver Membership</label>
+                        <label><input type="radio" name="radio" value="gold" /> Gold Membership</label>
+                    </fieldset>
 
                     <input type="submit" value="Submit">
+
                 </form>
             </section>
 
