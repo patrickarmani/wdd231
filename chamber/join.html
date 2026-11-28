@@ -134,8 +134,9 @@
                         <label for="organizationalTitle">Organizational Title:</label><br>
                         <input type="text" id="organizationalTitle" required name="orgTitle" autocomplete="org-title" placeholder="organization-title"><br><br>
                         
-                        <label for="organizationalTitle">Mobile Phone:</label><br>
-                        <input type="phone" id="mobPhone" name="mobPhone" autocomplete="org-phone" placeholdere="mobile phone number"><br><br>
+                        <label for="mobPhone">Enter your mobile phone:</label><br>
+                        <small>Format: 12-34567-8901</small>
+                        <input type="tel" id="mobPhone" name="mobPhone" pattern="[1-9]{2}-9[0-9]{4}-[0-9]{4}" required autocomplete="tel" placeholder="12-94567-8901"><br><br>
                         
                         <label for="email">* Email:</label>
                         <input name="email" id="email" required type="email" autocomplete="exemple@exemple.com" />
