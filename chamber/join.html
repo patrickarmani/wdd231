@@ -122,28 +122,26 @@
             <section class="join-form">
                 <h2>Membership application form</h2>
 
-                <form action="/thankyou.html" method="get">
+                <form action="thankyou.html" method="get">
                     <fieldset> 
                         
                         <label for="firstName">First name:</label><br>
-                        <input type="text" id="firstName" name="firstName" autocomplete="given-name" placeholder="John"><br>
+                        <input type="text" id="firstName" required name="firstName" autocomplete="given-name" placeholder="John"><br>
                         
                         <label for="lastName">Last name:</label><br>
-                        <input type="text" id="lastName" name="lastName" autocomplete="family-name" placeholder="Doe"><br><br>
+                        <input type="text" id="lastName" required name="lastName" autocomplete="family-name" placeholder="Doe"><br><br>
                         
                         <label for="organizationalTitle">Organizational Title:</label><br>
-                        <input type="text" id="organizationalTitle" name="orgTitle" autocomplete="org-title" placeholder="organization-title"><br><br>
+                        <input type="text" id="organizationalTitle" required name="orgTitle" autocomplete="org-title" placeholder="organization-title"><br><br>
                         
                         <label for="organizationalTitle">Mobile Phone:</label><br>
-                        <input type="number" id="mobPhone" name="mobPhone" autocomplete="org-phone" placeholdere="mobile phone number"><br><br>
+                        <input type="phone" id="mobPhone" name="mobPhone" autocomplete="org-phone" placeholdere="mobile phone number"><br><br>
                         
-                        <input type="text" id="orgName" name="orgName" autocomplete="organization"  placeholder="business/organization's name"><br><br>
-                        
-                        <label for="email">Email:</label>
+                        <label for="email">* Email:</label>
                         <input name="email" id="email" required type="email" autocomplete="exemple@exemple.com" />
                         
                         <label for="description">A business/organization's description:</label>
-                        <input name="description" id="description" type="text" autocomplete="exemple@exemple.com" />
+                        <input name="description" id="description" required type="text" autocomplete="exemple@exemple.com" />
 
 
 
